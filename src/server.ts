@@ -61,7 +61,7 @@ process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'));
 
 function prepareLinkTask(link: string) {
-  return `Check ${link}`;
+  return `- Check ${link}`;
 }
 
 function prepareTextTask(text: string) {
@@ -81,7 +81,7 @@ async function readTasksFile(path: string) {
 }
 
 function addTask(content: string, task: string) {
-  return `${content}\n${task}`;
+  return `${content}\n${task}\n`;
 }
 
 async function writeTasksFile(path: string, content: string) {
